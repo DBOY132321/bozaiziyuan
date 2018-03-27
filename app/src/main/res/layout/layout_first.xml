@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.jude.rollviewpager.RollPagerView
+        android:id="@+id/rollPV"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        >
+    </com.jude.rollviewpager.RollPagerView>
+
+
+    <TextView
+        android:id="@+id/java_id"
+        android:layout_below="@+id/rollPV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:drawablePadding="25dp"
+        android:drawableLeft="@mipmap/java"
+        android:paddingLeft="120dp"
+        android:paddingRight="100dp"
+        android:textColor="#000"
+        android:text="JAVA" />
+
+    <TextView
+        android:id="@+id/android_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/java_id"
+        android:drawableLeft="@mipmap/android"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="25dp"
+        android:gravity="center"
+        android:paddingLeft="120dp"
+        android:paddingRight="100dp"
+        android:textColor="#000"
+        android:text="ANDROID" />
+    <TextView
+        android:id="@+id/sql_id"
+        android:layout_below="@+id/android_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="25dp"
+        android:drawableLeft="@mipmap/sql"
+        android:paddingLeft="120dp"
+        android:paddingRight="100dp"
+        android:textColor="#000"
+        android:text="SQL" />
+    <TextView
+        android:id="@+id/html_id"
+        android:layout_below="@+id/sql_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="25dp"
+        android:drawableLeft="@mipmap/html"
+        android:paddingLeft="120dp"
+        android:paddingRight="100dp"
+        android:textColor="#000"
+        android:text="HTML" />
+    <TextView
+        android:id="@+id/javaee_id"
+        android:layout_below="@+id/html_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="25dp"
+        android:drawableLeft="@mipmap/javaee"
+        android:paddingLeft="120dp"
+        android:paddingRight="100dp"
+        android:textColor="#000"
+        android:text="JAVAEE" />
+
+    <TextView
+        android:id="@+id/jsp_id"
+        android:layout_below="@+id/javaee_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="25dp"
+        android:drawableLeft="@mipmap/jsp"
+        android:paddingLeft="120dp"
+        android:paddingRight="100dp"
+        android:textColor="#000"
+        android:text="JSP" />
+
+
+</RelativeLayout>

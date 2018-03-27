@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+>
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:background="#48d1cc">
+
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/title_menu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="23dp"
+                app:srcCompat="@mipmap/title_menu" />
+
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/myviewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8.5"
+            >
+
+            <!--android:background="#ffff00"-->
+        </android.support.v4.view.ViewPager>
+            <LinearLayout
+                android:id="@+id/cursorarea"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                android:background="#CDCDCD"  >
+
+
+                <ImageView
+                    android:id="@+id/cursor_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    />
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/bottomlineaer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="#DCDCDC">
+
+
+                <RadioGroup
+                    android:id="@+id/rg_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/btn_first"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="首页"
+                        android:padding="-5dp"
+                        android:textSize="14sp"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/firstbutton"/>
+                    <RadioButton
+                        android:id="@+id/btn_second"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="信息"
+                        android:padding="-5dp"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:drawableTop="@drawable/secondbutton"/>
+                    <RadioButton
+                        android:id="@+id/btn_third"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="我的"
+                        android:gravity="center"
+                        android:padding="-5dp"
+                        android:textSize="14sp"
+                        android:button="@null"
+                        android:drawableTop="@drawable/thridbutton"/>
+                    <RadioButton
+                        android:id="@+id/btn_four"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="设置"
+                        android:padding="-5dp"
+                        android:textSize="14sp"
+                        android:button="@null"
+                        android:drawableTop="@drawable/fourbutton" />
+                </RadioGroup>
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            app:menu="@menu/menu"
+            app:itemIconTint="@color/colorAccent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/header"
+            android:fitsSystemWindows="true"
+
+            >
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

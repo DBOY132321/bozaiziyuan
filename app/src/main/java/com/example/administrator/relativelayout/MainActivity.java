@@ -1,5 +1,6 @@
 package com.example.administrator.relativelayout;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -10,9 +11,11 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -264,5 +267,35 @@ public class MainActivity extends FragmentActivity implements ViewPager.OnPageCh
 
 
 }
+  //设置返回键 退出提示
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==KeyEvent.KEYCODE_BACK){
+          final AlertDialog.Builder isExit=new AlertDialog.Builder(MainActivity.this);
+            isExit.setIcon(R.mipmap.app);
+            isExit.setTitle("波仔提示");
+            isExit.setMessage("确定要退出吗？");
+            isExit.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                    finish();
+                }
+            });
+            isExit.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+
+                }
+            });
+            isExit.show();
+
+        }
+
+
+        return false;
+    }
 
 }

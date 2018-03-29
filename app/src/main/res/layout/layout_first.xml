@@ -67,7 +67,7 @@
         android:textColor="#000"
         android:text="HTML" />
     <TextView
-        android:id="@+id/javaee_id"
+        android:id="@+id/Python_id"
         android:layout_below="@+id/html_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,11 +78,11 @@
         android:paddingLeft="120dp"
         android:paddingRight="100dp"
         android:textColor="#000"
-        android:text="JAVAEE" />
+        android:text="PYTHON" />
 
     <TextView
         android:id="@+id/jsp_id"
-        android:layout_below="@+id/javaee_id"
+        android:layout_below="@+id/Python_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
